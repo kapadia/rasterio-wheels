@@ -204,7 +204,7 @@ function build_curl {
     CXXFLAGS="$CXXFLAGS -g -O2"
     build_nghttp2
     if [ -n "$IS_OSX" ]; then
-        brew install curl
+        brew install curl-openssl
     else
     	local flags="--prefix=$BUILD_PREFIX --with-nghttp2=$BUILD_PREFIX --with-libz --with-ssl"
         (cd curl-${CURL_VERSION} \
